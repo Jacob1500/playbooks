@@ -3,6 +3,8 @@ configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
 
+plist_server: https://127.0.0.1
+
 configure_dock: true
 dockitems_remove: []
 dockitems_persist: []

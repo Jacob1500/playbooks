@@ -23,6 +23,6 @@
     - import_tasks: tasks/osx.yml
       when: osx
       tags: [osx]
-    - import_tasks: 
+    - import_tasks: tasks/plists.yml
     - import_tasks
 
