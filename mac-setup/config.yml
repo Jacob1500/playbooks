@@ -89,7 +89,7 @@ homebrew_cask_apps:
   - font-fira-mono-nerd-font
   - font-go-mono-nerd-font
   - font-gohufont-nerd-font
-  - font-hack-nerd-font
+  - font-hack-nerd-fonts
   - font-hasklug-nerd-font
   - font-heavy-data-nerd-font
   - font-hurmit-nerd-font
@@ -131,10 +131,17 @@ mas_installed_apps:
 # Config; (plist, other config files)                                                #
 ##################################################################
 
-plist_file_server: "https://127.0.0.1"
+plist_file_server: "https://127.0.0.1/"
 
 plists:
-  - {name: iTerm2, configure: true, plsit_location: ~/Library/Preferences/com.googlecode.iterm2.plist, remote: /{{ name }} }
-  - {name: Alfred, configure: true, plsit_location: ~/Library/Preferences/com.runningwithcrayons.Alfred.plist, remote: /{{ name }} }
-  - {name: appcleaner, configure: false, plsit_location: ~/Library/Preferences/net.freemacsoft.Appcleaner.plist, remote: /{{ name }} }
-
+  - {name: "iterm2", configure: true, plsit_location: "~/Library/Preferences/com.googlecode.iterm2.plist", remote: {{ name }} }
+  - {name: "Alfred", configure: true, plsit_location: ~/Library/Preferences/com.runningwithcrayons.Alfred.plist, remote: {{ name }} }
+  - {name: "appcleaner", configure: false, plsit_location: "~/Library/Preferences/net.freemacsoft.Appcleaner.plist", remote: {{ name }} }
+  - {name: "element", configure: false, plsit_location: "~/Library/Preferences/im.riot.app.plist", remote: {{ name }} }
+  - {name: "firefox", configure: false, plsit_location: "~/Library/Preferences/org.mozilla.firefox.plist", remote: {{ name }} }
+  - {name: "keepassxc", configure: false, plsit_location: "~/Library/Preferences/org.keepassxc.keepassxc.plist", remote: {{ name }} }
+  - {name: "lulu", configure: false, plsit_location: "~/Library/Preferences/com.objective-see.lulu.app.plist", remote: {{ name }} }
+  - {name: "megasync", configure: false, plsit_location: "~/Library/Preferences/mega.mac.plist", remote: {{ name }} }
+  - {name: "rectangle", configure: false, plsit_location: "~/Library/Preferences/com.knollsoft.Rectangle.plist", remote: {{ name }} }
+  - {name: "visual-studio-code", configure: false, plsit_location: "~/Library/Preferences/com.microsoft.VSCode.plist", remote: {{ name }} }
+  

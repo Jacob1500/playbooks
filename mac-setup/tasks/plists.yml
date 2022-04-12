@@ -4,4 +4,5 @@
     get_url: 
       url: '{{ plist_server }}{{ item }}'
       dest: {{ plist_location }}
+      with_items: {{ plists }}
       
