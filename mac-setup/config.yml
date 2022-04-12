@@ -3,7 +3,7 @@ configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
 
-plist_server: https://127.0.0.1
+plist_server: "https://127.0.0.1"
 
 configure_dock: true
 dockitems_remove: []
@@ -18,11 +18,11 @@ dotfiles_files:
   - .osx
   - .vimrc
 
-# Homebrew
+
 osx_script: "~/.osx --no-restart"
 
 ##################################################################
-# PKG; Homebrew(taps, packages, casks), mas                      #
+# PKG; Homebrew(taps, packages, casks), MAS                      #
 ##################################################################
 
 homebrew_cask_appdir: /Applications
@@ -55,8 +55,6 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - alfred 
   - appcleaner
-  - bitwarden
-  - caffeine
   - docker
   - element
   - firefox
@@ -125,7 +123,18 @@ homebrew_cask_apps:
 
 mas_installed_apps:
   - { id: 1487937127, name: "Craft" }
-  - { id: 497799835, name: "Xcode" }
   - { id: 409183694, name: "Keynote" }
+  - { id: 1099454186, name: "Coffee Buzz" }
 
+
+##################################################################
+# Config; (plist, other config files)                                                #
+##################################################################
+
+plist_file_server: "https://127.0.0.1"
+
+plists:
+  - {name: iTerm2, configure: true, plsit_location: ~/Library/Preferences/com.googlecode.iterm2.plist, remote: /{{ name }} }
+  - {name: Alfred, configure: true, plsit_location: ~/Library/Preferences/com.runningwithcrayons.Alfred.plist, remote: /{{ name }} }
+  - {name: appcleaner, configure: false, plsit_location: ~/Library/Preferences/net.freemacsoft.Appcleaner.plist, remote: /{{ name }} }
 

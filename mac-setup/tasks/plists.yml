@@ -2,6 +2,6 @@
 - name: Configure Plist(s)
   - name: iterm
     get_url: 
-      url: '{{plist_server}}/item'
-      dest: ~/Library/Preferences/com.googlecode.iterm2.plist
+      url: '{{ plist_server }}{{ item }}'
+      dest: {{ plist_location }}
       
